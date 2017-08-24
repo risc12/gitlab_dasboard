@@ -1,0 +1,124 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 99%;
+}
+
+body {
+  font-family: BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.ultra-thin {
+  font-weight: 100;
+  color: #c1c3c5;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 1px solid #f1f3f5;
+  margin: 15px;
+  padding: 15px;
+}
+
+.header h1 {
+  margin-bottom: 7px;
+}
+
+.header .user {
+  margin-bottom: 15px;
+}
+
+.projects-wrapper {
+  vertical-align: top;
+  padding-left: 30px;
+  width: 25%;
+  display: inline-block;
+}
+
+.projects-wrapper .projects {
+  margin-top: 15px;
+  border-right: 1px solid #f1f3f5;
+}
+
+.projects-wrapper .project {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.commits-wrapper {
+  vertical-align: top;
+  padding-left: 30px;
+  width: 70%;
+  display: inline-block;
+}
+
+.commits-wrapper .commits {
+  margin-top: 15px;
+}
+
+.commits-wrapper .commits .authors{
+  margin-bottom: 15px;
+}
+
+.commits-wrapper .commits .authors .author {
+  padding-left: 25px;
+  font-size: 10px;
+  font-weight: 100;
+  color: #a1a3a5;
+  display: inline-block;
+  line-height: 2.3;
+}
+
+.commits-wrapper .commits .authors .author:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.commits-wrapper .commits .authors .author.active {
+  color: black;
+  font-weight: 500;
+}
+
+.commits-wrapper .commit {
+  font-size: 12px;
+  line-height: 1.45;
+  margin-bottom: 15px;
+  max-width: 700px;
+}
+
+.commits-wrapper .commit .date {
+  width: 80px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.commits-wrapper .commit .description {
+  display: inline-block;
+  max-width: 600px;
+}
+
+.token-input.token-input__hidden {
+  display: none;
+}
