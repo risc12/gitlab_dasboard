@@ -1,24 +1,5 @@
 import React from 'react';
 
-// <div className='authors'>
-//   <div
-//     className={`author ${this.state.activeAuthorName === 'all' ? 'active' : ''}`}
-//     key={'all'}
-//     onClick={() => this.handleAuthorClick('all')}
-//   >
-//     All
-//   </div>
-//   {getAuthors(this.props.commits).map(author =>
-//     <div
-//       className={`author ${this.state.activeAuthorName === author ? 'active' : ''}`}
-//       key={author}
-//       onClick={() => this.handleAuthorClick(author)}
-//     >
-//       {author}
-//     </div>)}
-//
-// </div>
-
 const padLeft = (nr, n, str) => {
     return Array(n-String(nr).length+1).join(str||'0')+nr;
 }

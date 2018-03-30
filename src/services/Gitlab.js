@@ -25,7 +25,7 @@ class Gitlab {
     console.log('gitlabData not in store, fetching...');
 
     const fetchedData = await Gitlab.fetchGitlabData();
-    console.log(fetchedData);
+
     store.set(yesterdayISOString(), fetchedData);
 
     return fetchedData;
@@ -53,12 +53,17 @@ class Gitlab {
     const commitsUrl = projectId => `${projectUrl(projectId)}/repository/commits${queryParams()}`;
 
     const promises = projects.map( project =>
-      fetch(commitsUrl(project.id)).then( res => res.json()));
+      fetch(commitsUrl(project.id))
+      .then( res => res.json())
+      .catch(() => [] ));
 
     return Promise.all(promises).then(responses => {
       let commitArray = [];
+      console.warn(responses);
       responses.forEach((response, index) => {
-        commitArray = commitArray.concat(response.map(commit => (Object.assign({}, commit, {projectId: projectIds[index]}))));
+        if(response.length) {
+          commitArray = commitArray.concat(response.map(commit => (Object.assign({}, commit, {projectId: projectIds[index]}))));
+        }
       })
       return commitArray;
     });
